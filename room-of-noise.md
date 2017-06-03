@@ -1,15 +1,15 @@
-Room of Noise (working title)
+Room of Sound (working title)
 =============================
 
 Author: Jimmy Thrasher (jimmy@jimmythrasher.com)
 
 Document Contributors:
-- TBD
+- Joshua Fitzgerald
 
 Overview
 --------
 
-The purpose of this document is to describe the design of the Room of Noise project, primarily for the goal of enable individuals to contribute in a distributed fashion. This document isn't a guide for implementation (e.g. that we might hand to a school group). Rather, it's a centralizing point for discussion.
+The purpose of this document is to describe the design of the Room of Sound project, primarily for the goal of enable individuals to contribute in a distributed fashion. This document isn't a guide for implementation (e.g. that we might hand to a school group). Rather, it's a centralizing point for discussion.
 
 The purpose of the project is to build a massive music instrument for the Burlington Maker Faire 2018.
 
@@ -79,6 +79,10 @@ The distributor would need to handle multiple MIDI input devices and multiple MI
 - input device sends a MIDI event on a particular channel
 - distributor sends the MIDI event to each of its MIDI output devices as-is
 
+### MIDI Interface
+
+Connects old MIDI instruments and controllers to the Distributor via USB. Something like this [MIDI Interface](https://www.amazon.com/midiplus-Tbox2X2-USB-MIDI-Interfaces/dp/B00WU6F4M6/ref=sr_1_3?ie=UTF8&qid=1495648871&sr=8-3&keywords=midi+interface)
+
 ### MIDI/CV Interface (optional)
 
 The purpose of the MIDI/CV interface is to allow instruments to be controlled via Doepfer/Eurorack modular synthesizer Control Voltage (CV). The component would act as an instrument listening on a particular channel (or set of channels). It would convert the MIDI signals into appropriate CV values.
@@ -108,6 +112,21 @@ MIDI instruments respond to MIDI events and make sound (usually). Standard examp
 - must provide their own power or be powered via wall power.
 - must provide their own output/amplification as needed (this may change).
 
+### Other components
+
+These are components that may not be core to the architecture, but are worth documenting anyway.
+
+#### RTP MIDI Controller
+
+Per Joshua, the idea would be to allow people to download an app to their phone and interact with the system. RTP MIDI would be one way to accomplish that.
+
+It could connect directly to the Distributor (don't know if this is possible) or to a Windows laptop or something that connects to the Distributor somehow.
+
+Topology
+--------
+
+![topology diagram](https://jimmy-share.s3.amazonaws.com/Room%20of%20Sound%20Toplogy.png)
+
 Discussion notes
 ----------------
 
@@ -129,3 +148,5 @@ Changelog
 ---------
 
 - 2017-05-22—Straw man one
+- 2017-05-24—Added topology diagram
+- 2017-05-24—Added RTP MIDI idea
