@@ -30,6 +30,16 @@ applications that use MIDI to your computer (they don't have to support RTP-MIDI
 1. Install [rtpMIDI](http://www.tobias-erichsen.de/software/rtpmidi.html)
 2. Follow the instructions at http://www.tobias-erichsen.de/software/rtpmidi/rtpmidi-tutorial.html to set up a connection between devices
 3. Install software capable of sending MIDI events to and from devices. In these instructions, we use 
-[SunVox](http://www.warmplace.ru/soft/sunvox/).
-4. Create a new project in SunVox.
-More to come!
+[SunVox](http://www.warmplace.ru/soft/sunvox/)
+4. Create a new project in SunVox
+5. In Preferences->MIDI, select your input devices. rtpMIDI should provide you with a virtual device representing the devices connected via RTP-MIDI; select that and anything else you want to use
+6. Create an Analog Generator module. You don't have to attach it to anything
+7. Select the Analog Generator, right-click it, and open the Module Properties menu
+8. Under MIDI Out, select an output device, unless you want to play input using SunVox itself.
+9. With the Analog Generator still selected, send a MIDI event over a device connected to RTP-MIDI. SunVox should receive the event and, if an output was specified, send the event to the output.
+
+(note: For more info on SunVox, visit http://www.warmplace.ru/wiki/sunvox:manual_en)
+
+## Mac, Linux, Android, etc. connection instructions:
+
+If you have successfully used a system with the RTP-MIDI protocol not listed here, feel free to edit this file with instructions for your system
