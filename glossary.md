@@ -5,7 +5,9 @@ Arduinos are usually only loaded with only one program. See https://en.wikipedia
 
 Clone: To copy a remote repository to a computer. See https://help.github.com/articles/cloning-a-repository/. Also see Repository. 
 
-GitHub: A repository-hosting website that we use in this project. See https://en.wikipedia.org/wiki/GitHub. Also see Repository.
+Distributor: The device that will route our input modules to our output modules. Right now, we think that the distributor may end up being a Raspberry Pi. See  https://github.com/jjthrash/room-of-sound/blob/master/room-of-sound.md. Also see Room of Sound. 
+
+GitHub: A repository-hosting website that we use in this project. See https://en.wikipedia.org/wiki/GitHub. Also see Repository, Clone, and Pull Request.
 
 GH: See GitHub.
 
@@ -23,7 +25,7 @@ MIDI Events: A MIDI command comprised of a few bytes. For specific events and th
 
 PR: See Pull Request.
 
-Pull Request: A request to combine two different versions of a repository. See https://help.github.com/articles/about-pull-requests/.
+Pull Request: A request to combine two different versions of a repository. See https://help.github.com/articles/about-pull-requests/. Also see Repository and Clone.
 
 Python: A relatively easy-to-use general-purpose programming language. There are two major types of Python: Python 2 and Python 3. The two variants are very similar, but have notable differences in key areas.
 Interestingly, Python uses whitespace instead of curly braces to denote scope. Python is often used in Raspberry Pi programming. See https://en.wikipedia.org/wiki/Python_(programming_language). Also see Raspberry Pi.
@@ -39,9 +41,10 @@ Repository: A project on GitHub, which often contains multiple files of multiple
 or remote, which means stored by GitHub. See https://help.github.com/articles/create-a-repo/;
 Also see Clone, GitHub, and Pull Request.
 
+Room of Sound: Our project for the Maker Faire. Essentially, the Room of Sound will be a modular device for making music. It will feature a Distributor, many different types of input, and many different types of output. All of these components will be linked using the MIDI standard. See https://github.com/jjthrash/room-of-sound/blob/master/room-of-sound.md. Also see MIDI and Distributor. 
+
 RPi: See Raspberry Pi.
 
-RTP-MIDI: If expanded, the acronym becomes Real Time-Packet Musical Instrument Digital Interface. A standard for transmitting MIDI Events over Wifi.
-See https://en.wikipedia.org/wiki/RTP-MIDI. Also see RTP, MIDI, and MIDI Event.
+RTP-MIDI: If expanded, the acronym becomes Real Time-Packet Musical Instrument Digital Interface. A standard for transmitting MIDI Events over Wifi. See https://en.wikipedia.org/wiki/RTP-MIDI. Also see RTP, MIDI, and MIDI Event.
 
-USB: Stands for Universal Serial Bus. The cable standard used by most modern devices; MIDI events can be transferred using this standard. See https://en.wikipedia.org/wiki/USB. Also see RTP-MIDI, MIDI cable.
+USB: Stands for Universal Serial Bus. The cable standard used by most modern devices; MIDI events can be transferred using this standard. See https://en.wikipedia.org/wiki/USB. Also see RTP-MIDI, MIDI Cable, and RTP-MIDI.
