@@ -3,6 +3,7 @@
 ## Documents
 
 - [Spec](room-of-noise.md)
+- [Glossary](glossary.md)
 - Getting started guide, TBD
 
 ## Tools
