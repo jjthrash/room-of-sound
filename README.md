@@ -2,7 +2,7 @@
 
 ## Documents
 
-- [Spec](room-of-noise.md)
+- [Spec](room-of-sound.md)
 - [Glossary](glossary.md)
 - [RTP MIDI Tips](RTP-MIDI-tips.md)—some information on setting up MIDI over wifi
 - Getting started guide, TBD
