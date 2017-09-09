@@ -1,5 +1,7 @@
 # Getting Started with the Room of Sound
 
+Jimmy Thrasher <jimmy@jimmythrasher.com>
+
 ## Overview
 
 The Room of Sound is a project by the Alamance Maker's Guild intended for
@@ -31,7 +33,31 @@ What parts make up the Room of Sound?
 
 ## Setting up your own MIDI Distributor
 
-TODO
+### Purchase
+
+- Raspberry Pi kit, such as [this](https://www.amazon.com/CanaKit-Raspberry-Complete-Starter-Kit/dp/B01C6Q2GSY/ref=sr_1_4?s=pc&ie=UTF8&qid=1504911968&sr=1-4&keywords=raspberry+pi)
+- or individual components (valid power supply, 16GB+ micro SD card, maybe a case)
+- USB MIDI cables, such as [these](https://www.amazon.com/VicTsing-Cable-Converter-Keyboard-Adapter/dp/B00ACGMOA6/ref=sr_1_3?ie=UTF8&qid=1504911939&sr=8-3&keywords=midi+usb)
+
+Optional, but recommended:
+
+- An HDMI capable monitor (maybe an old VGA monitor plus one of [these](https://www.amazon.com/VicTsing-Gold-Plated-Converter-Adapter-Desktop/dp/B016HL4CAY/ref=sr_1_14?ie=UTF8&qid=1504912137&sr=8-14&keywords=hdmi+adapter))
+- A USB keyboard and mouse
+- A USB hub
+
+### Set up your SD Card
+
+- Download and install [PiBakery](http://pibakery.org/)
+- Download the [MIDI Distributor Recipe](https://raw.githubusercontent.com/jjthrash/room-of-sound/master/midi-distributor.xml). Save it as `midi-distributor.xml`. You might need to File -> Save, or Ctrl-S, or Cmd-S, depending on your computer.
+- Open PiBakery. You might have to type in your administrator password to give the program access to your SD Card.
+- Import the `midi-distributor.xml` file:
+  - ![import](http://take.ms/7xAX2)
+  - ![select file](http://take.ms/pnNDf)
+  - ![result](http://take.ms/K66Sv)
+- Change the wifi settings to match the one in your house/office/workshop/sea-steading platform
+  - ![wifi setup](http://take.ms/eyrzgX)
+- Bake your Pi (get it? get it?)
+  - ![write](http://take.ms/wSIS9)
 
 ## Other resources
 
