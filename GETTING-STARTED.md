@@ -56,8 +56,60 @@ Optional, but recommended:
   - ![result](http://take.ms/K66Sv)
 - Change the wifi settings to match the one in your house/office/workshop/sea-steading platform
   - ![wifi setup](http://take.ms/eyrzgX)
+- Insert your SD card (it will need an adapter of some kind, but it probably came with one)
 - Bake your Pi (get it? get it?)
   - ![write](http://take.ms/wSIS9)
+
+### Boot your Raspberry Pi for the First Time
+
+PiBakery will do a bunch of setup for you the first time it boots.
+
+- Hook up your monitor and keyboard if you have one. This step really helps.. in fact, I (Jimmy) have never had it work reliably without a monitor, for some reason.
+- Plug in your SD card to the Raspberry Pi
+- Plug the power into the Raspberry Pi
+- Watch the whole process, then wait for it to power off
+
+After it powers off, it should be ready for use.
+
+### Use your new MIDI Distributor
+
+After it's booted up the second and subsequent times, it will look every minute for new USB MIDI devices. When it finds one it will hook it up with all the other ones.
+
+### Tips and Tricks
+
+If you have an old-style MIDI device (with 5-DIN jacks, like [this guy](https://images.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.ZyKTtVuD9TsLs8aZ0vahxwEsDh%26pid%3D15.1&f=1))
+you will definitely need the USB MIDI cables, mentioned above. Be sure to plug the "out" of the MIDI cables into the "in" of your instrument.
+
+The Raspberry Pi has a limited number of USB ports. If you start running out, use a *powered* USB hub (one with a wall-wart jack to give it juice).
+
+## Building your own Instrument
+
+You are really only limited by budget and reality here, but following are some guidelines to get going building your own instrument.
+
+### General Guidelines
+
+- Don't feel like you have to do *all* of it. If you can make an instrument that makes noise, but want help getting MIDI hooked up, ask for help!
+- Focus on the instrument first, then make it work with the Room of Sound. No sense spending a bunch of time on MIDI or Arduino stuff if the idea doesn't pan out. Except that learning is fun.
+
+### What is MIDI?
+
+MIDI stands for Musical Instrument Digital Interface. It's been around forever and is very well supported. We've chosen MIDI as the interface for that reason.
+
+Things you can do with MIDI:
+- play notes
+- control how loud the notes are
+- control settings on your instrument, like timbre, sustain length
+- divide messages into channels so that some instruments receive some messages and other instruments receive others
+
+Keep in mind that "notes" here can mean "bang a pot." I.e. it doesn't have to play a particular note. If you make a robotic drum kit, you can crash the cymbal when someone presses a C#, if you want.
+
+### The parts
+
+Broadly speaking, each instrument can be divided into these parts:
+
+- MIDI interface. Optional, but lets it participate in the Room in a very direct way.
+- The instrument itself. The thing that makes noise.
+- Microcontroller. Optional, but is required for MIDI, and lets you do things like control solenoids, servomotors, etc.
 
 ## Other resources
 
