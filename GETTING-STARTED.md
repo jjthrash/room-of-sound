@@ -31,7 +31,7 @@ What parts make up the Room of Sound?
 - **MIDI Distributor:** To help with some technical details, we have a MIDI Distributor that Instruments and Controllers can plug into to get connected.
 - **Power:** Juice, electricity. The Room of Sound will have ways to get power to your component.
 
-## Setting up your own MIDI Distributor
+## Setting up your own MIDI Distributor if you don't have a Raspberry Pi set up yet
 
 ### Purchase
 
@@ -81,6 +81,25 @@ If you have an old-style MIDI device (with 5-DIN jacks, like [this guy](https://
 you will definitely need the USB MIDI cables, mentioned above. Be sure to plug the "out" of the MIDI cables into the "in" of your instrument.
 
 The Raspberry Pi has a limited number of USB ports. If you start running out, use a *powered* USB hub (one with a wall-wart jack to give it juice).
+
+## Setting up your own MIDI Distributor if you already have a Raspberry Pi set up
+
+The following assumes a mostly vanilla Raspbian setup.
+
+Use the following commands at a terminal:
+
+```
+cd                                                                                         # make sure you're in your home directory
+curl -sL https://deb.nodesource.com/setup | sudo bash -                                    # set up NodeJS for Raspberry Pi
+sudo apt-get install nodejs libavahi-compat-libdnssd-dev libasound2-dev                    # Install dependencies
+npm install mdns2                                                                          # Install more dependencies
+npm install midi
+npm install rtpmidi
+curl -O https://raw.githubusercontent.com/jjthrash/room-of-sound/master/connect.py         # Download the MIDI connector script
+(crontab -l 2>/dev/null; echo "* * * * * /usr/bin/python /home/pi/connect.py") | crontab - # Set up the script to run every minute
+```
+
+Then reboot.
 
 ## Building your own Instrument
 
